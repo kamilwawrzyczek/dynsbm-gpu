@@ -2,7 +2,7 @@
 gpu=true
 iterations=10
 init_mehods=("random" "k-means")
-distributions=("uniform" "normal", "power")
+distributions=("uniform" "normal" "power")
 start_N=0
 end_N=400
 
