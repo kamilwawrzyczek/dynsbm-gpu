@@ -13,8 +13,8 @@ def find_random_initial_clustering(data: GraphData, seed=time.time()):
     return [random.randint(1, data.Q) for i in range(data.N)]
 
 
-def find_initial_clustering(data: GraphData):
-    with tf.Session(config=tf.ConfigProto(log_device_placement=False, allow_soft_placement=True)) as session:
+def find_initial_clustering(data: GraphData, config: tf.ConfigProto):
+    with tf.Session(config=config) as session:
         # create data matrix containing all the adjacency time step matrices stacked in consecutive column blocks
         all_graph_data_matrix = tf.reshape(tf.transpose(data.graph, [1, 0, 2]), [data.N, data.T * data.N])
 

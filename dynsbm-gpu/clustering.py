@@ -43,7 +43,7 @@ def calculate_clusters(data_file_name, init_method="kmeans", max_iterations=10, 
         if init_method == "random":
             initial_clusters = find_random_initial_clustering(data)
         else:
-            initial_clusters = find_initial_clustering(data)
+            initial_clusters = find_initial_clustering(data, config)
 
         tau = Tau(data, initial_clusters)
         multinomial = Multinomial(data, tau)
