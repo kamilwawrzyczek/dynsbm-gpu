@@ -1,3 +1,10 @@
+## dynsbm-gpu
+Multithread implementation of statistical clustering algorithm proposed by Matias and Miele in paper
+Statistical clustering of temporal networks through a dynamic stochastic block model.
+
+Algorithm written as a part of my master thesis. It can run even 71 times faster on GPU than on single CPU thread.
+
+
 ## Installation
 ### Requirements
 - python >= 3.5
@@ -27,3 +34,8 @@ where **T** is number of time steps, **N** number of vertices, **Q** number of c
 **K** maximum weight and **distribution** is name of distribution used to generate
 weights in graph. Algorithm itself do not require this naming convention to work,
 but `run_all_data_sets.sh` use it to filter out some of the data sets.
+
+
+## References
+- [Matias, C., & Miele, V. (2017). Statistical clustering of temporal networks through a dynamic stochastic block model. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 79(4), 1119-1141.
+ISO 690](https://arxiv.org/abs/1506.07464)
